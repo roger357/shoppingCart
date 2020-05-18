@@ -1,0 +1,52 @@
+<h2>Responsive Checkout Form</h2>
+<p>Resize the browser window to see the effect. When the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other.</p>
+<div class="row">
+  <div class="col-75">
+    <div class="container">
+
+        <div class="row">
+          <div class="col-50">
+            <div class="wrapper">
+              <div class="items">
+                <div class="item" *ngFor="let product of products"  >
+                  <img src="https://picsum.photos/200" alt="item" />
+                  <h2>{{product.name}}</h2>
+                  <p>Price: <em>${{product.value}}</em></p>
+                  <p><em>{{product.description}}</em></p>
+
+                  <div *ngIf="this.shoppingCar.state == 'PENDING'; else elseBlock">
+                    <button class="add-to-cart" type="button" (click)="addProductToCar(product.id)">Add To Cart</button>
+                  </div>
+                  <ng-template #elseBlock>
+                    <button class="add-to-cart" type="button" disbled>Add To Cart</button>
+                  </ng-template>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+    </div>
+  </div>
+  <div class="col-25">
+    <div class="container">
+      <h4>Cart <span class="price" style="color:black"><i class="fa fa-shopping-cart"></i> <b>{{carId}}</b></span></h4>
+      <p *ngFor="let carProduct of this.shoppingCar.products" >
+
+        <a href="javascript: void(0);" (click)="removeProductFromCar(carProduct.id)">-</a>&nbsp;&nbsp;
+        <a href="javascript: void(0);" title="{{carProduct.name}}" style="color: inherit;">{{carProduct.name | slice:0:10 }}</a> <span class="price">${{carProduct.value}}</span>
+      </p>
+      <hr>
+      <p>Total <span class="price" style="color:black"><b>${{this.shoppingCar.value}}</b></span></p>
+      <div *ngIf="this.shoppingCar.state == 'PENDING'; else elseBlock">
+        <button class="add-to-cart" type="button" (click)="checkoutCar()">Checkout</button>
+      </div>
+      <ng-template #elseBlock>
+        <button class="add-to-cart" type="button" disabled>Checkout</button>
+      </ng-template>
+    </div>
+  </div>
+</div>
+
+<a href="javascript: void(0);"  class="float" (click)="goBack()"><</a>

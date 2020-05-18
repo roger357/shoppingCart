@@ -1,0 +1,130 @@
+*{padding:0;margin:0;}
+
+body{
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:18px;
+	background-color:#CCC;
+}
+
+.float{
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:40px;
+	right:40px;
+	background-color:#0C9;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+	box-shadow: 2px 2px 3px #999;
+}
+
+.my-float{
+	margin-top:22px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: #F2EEE9;
+    font: normal 13px/1.5 Georgia, Serif;
+    color: #333;
+}
+.wrapper {
+    width: 705px;
+    margin: 20px auto;
+    padding: 20px;
+}
+h1 {
+    display: inline-block;
+    background-color: #f39c12;
+    color: #fff;
+    font-size: 20px;
+    font-weight: normal;
+    text-transform: uppercase;
+    padding: 4px 20px;
+    float: left;
+}
+.clear {
+    clear: both;
+}
+.items {
+    display: block;
+    margin: 20px 0;
+}
+.item {
+    background-color: #fff;
+    float: left;
+    margin: 0 10px 10px 0;
+    width: 205px;
+    padding: 10px;
+    height: 320px;
+}
+.item img {
+    display: block;
+    margin: auto;
+}
+h2 {
+    font-size: 16px;
+    display: block;
+    border-bottom: 1px solid #ccc;
+    margin: 0 0 10px 0;
+    padding: 0 0 5px 0;
+}
+.add-to-cart {
+    border: 1px solid #15A209;
+    padding: 1px 11px;
+    background-color: #fff;
+    color: #1B7235;
+    text-transform: uppercase;
+    float: right;
+    margin: 5px 0;
+    font-weight: bold;
+    cursor: pointer;
+}
+.add-to-cart-del {
+    border: 1px solid #D90C0C;
+    padding: 1px 11px;
+    background-color: #fff;
+    color: #722A1B;
+    text-transform: uppercase;
+    float: right;
+    margin: 5px 0;
+    font-weight: bold;
+    cursor: pointer;
+}
+span {
+    float: right;
+}
+.shopping-cart {
+    display: inline-block;
+    background: url('https://pp.netclipart.com/pp/s/61-610294_add-to-cart-svg-png-icon-free-download.png?size=24') no-repeat 0 0;
+    width: 24px;
+    height: 24px;
+    margin: 0 10px 0 0;
+}
+
+.float {
+  /*container*/
+  border: 1px solid;
+  position: fixed;
+	width: 60px;
+	height: 60px;
+	bottom: 40px;
+	right: 40px;
+	background-color: #0C9;
+	color: #FFF;
+	border-radius: 50px;
+	text-align: center;
+	box-shadow: 2px 2px 3px #999;
+  z-index: 1000;
+  /*internal*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: bold;
+}
